@@ -8,9 +8,9 @@
 dwm_date () {
     printf "%s" "$SEP1"
     if [ "$IDENTIFIER" = "unicode" ]; then
-        printf "📆 %s" "$(date "+%a %Y.%m.%d %T")"
+        printf "📆 %s" "$(date "+%a %Y.%m.%d %H:%M")"
     else
-        printf " %s" "$(date "+%a %Y.%m.%d %T")"
+        printf " %s" "$(date "+%Y.%m.%d %H:%M")"
     fi
     printf "%s\n" "$SEP2"
 }
