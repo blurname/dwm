@@ -1405,7 +1405,7 @@ run(void)
 
 void
 runAutostart(void) {
-	system("cd ~/prog/dwm/dwm-bar; ./dwm_bar.sh &");
+	system("cd ~/scripts/; ./bar-for.sh &");
 }
 
 void
