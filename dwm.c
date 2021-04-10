@@ -1405,7 +1405,7 @@ run(void)
 
 void
 runAutostart(void) {
-	system("cd ~/scripts/; ./bar-for.sh &");
+	system("cd ~/scripts/; ./autostart.sh &");
 }
 
 void
