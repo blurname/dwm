@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Code Nerd Font Mono:size=6" };
-static const char dmenufont[]       = "Fira Code Nerd Font Mono:size=10";
+static const char *fonts[]          = { "Iosevka:size=10" };
+static const char dmenufont[]       = "Iosevka:size=10";
 static const char col_border[]      = "#42A5F5";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -70,14 +70,17 @@ static const char *screenshotcmd[]  = { "flameshot","gui", NULL };
 
 static const char *upvol[]  = { "/home/b/scripts/vol-up.sh",NULL };
 static const char *downvol[]  = { "/home/b/scripts/vol-down.sh",NULL };
+static const char *changewp[]  = { "/home/b/scripts/wp-change.sh",NULL };
+
 // static const char *voltoggle[]  = { "/home/b/scripts/vol-toggle.sh",NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ControlMask,	          XK_Up,	 spawn,          {.v = upvol } },
+	{ MODKEY|ControlMask,	          XK_Up,	   spawn,          {.v = upvol } },
 	{ MODKEY|ControlMask,	          XK_Down,	 spawn,          {.v = downvol } },
+	{ MODKEY|ControlMask,	          XK_Left,	 spawn,          {.v = changewp } },
 	{ MODKEY|ControlMask,           XK_a,			 spawn,          {.v = screenshotcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
