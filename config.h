@@ -57,7 +57,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -70,12 +70,12 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *screenshotcmd[]  = { "flameshot","gui", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
+// static const char *screenshotcmd[]  = { "flameshot","gui", NULL };
 
-static const char *upvol[]  = { "/home/b/scripts/vol-up.sh",NULL };
-static const char *downvol[]  = { "/home/b/scripts/vol-down.sh",NULL };
-static const char *changewp[]  = { "/home/b/scripts/wp-change.sh",NULL };
+static const char *upvol[]  = { "/home/bl/scripts/vol-up.sh",NULL };
+static const char *downvol[]  = { "/home/bl/scripts/vol-down.sh",NULL };
+static const char *changewp[]  = { "/home/bl/b/scripts/wp-change.sh",NULL };
 
 // static const char *voltoggle[]  = { "/home/b/scripts/vol-toggle.sh",NULL };
 
@@ -86,7 +86,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,	          XK_Up,	   spawn,          {.v = upvol } },
 	{ MODKEY|ControlMask,	          XK_Down,	 spawn,          {.v = downvol } },
 	{ MODKEY|ControlMask,	          XK_Left,	 spawn,          {.v = changewp } },
-	{ MODKEY|ControlMask,           XK_a,			 spawn,          {.v = screenshotcmd } },
+	// { MODKEY|ControlMask,           XK_a,			 spawn,          {.v = screenshotcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -118,7 +118,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	// { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
