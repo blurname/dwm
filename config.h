@@ -32,7 +32,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "neo", "fox", "all", "four", "five", "eye", "seven", "wall", "music" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -41,7 +41,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
@@ -75,7 +75,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 
 static const char *upvol[]  = { "/home/bl/scripts/vol-up.sh",NULL };
 static const char *downvol[]  = { "/home/bl/scripts/vol-down.sh",NULL };
-static const char *changewp[]  = { "/home/bl/b/scripts/wp-change.sh",NULL };
+static const char *changewp[]  = { "/home/bl/scripts/wp-change.sh",NULL };
 
 // static const char *voltoggle[]  = { "/home/b/scripts/vol-toggle.sh",NULL };
 
