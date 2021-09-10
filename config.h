@@ -10,8 +10,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka:size=10" };
-static const char dmenufont[]       = "Iosevka:size=10";
+static const char *fonts[]          = { "jetbrainsmono nerd font mono:size=11" };
+static const char dmenufont[]       = "jetbrainsmono nerd font mono:size=11";
 static const char col_border[]      = "#42A5F5";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -52,8 +52,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "Tile",      tile },    /* first entry is default */
-	{ "NULL",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "Float",      NULL },    /* no layout function means floating behavior */
+	{ "Monocle",      monocle },
 };
 
 /* key definitions */
@@ -118,7 +118,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	// { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+ //{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
